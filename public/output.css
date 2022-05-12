@@ -494,12 +494,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   right: 0.75rem;
 }
 
-.m-10{
-  margin: 2.5rem;
+.left-\[calc\(-50vw\+50\%\)\]{
+  left: calc(-50vw + 50%);
 }
 
-.m-3{
-  margin: 0.75rem;
+.left-\[calc\(-50vw_\+_50\%\)\]{
+  left: calc(-50vw + 50%);
+}
+
+.m-10{
+  margin: 2.5rem;
 }
 
 .mx-auto{
@@ -593,6 +597,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 130px;
 }
 
+.h-\[340px\]{
+  height: 340px;
+}
+
+.h-\[1000px\]{
+  height: 1000px;
+}
+
+.h-\[40px\]{
+  height: 40px;
+}
+
 .w-full{
   width: 100%;
 }
@@ -613,6 +629,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-\[100px\]{
   width: 100px;
+}
+
+.w-\[100vw\]{
+  width: 100vw;
 }
 
 .max-w-screen-2xl{
@@ -800,8 +820,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-image: url('./img/magazine-image-03.jpeg');
 }
 
+.bg-\[url\(\'\.\/img\/bg-parallax-01\.jpeg\'\)\]{
+  background-image: url('./img/bg-parallax-01.jpeg');
+}
+
 .bg-cover{
   background-size: cover;
+}
+
+.bg-fixed{
+  background-attachment: fixed;
 }
 
 .bg-bottom{
@@ -1171,6 +1199,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: block;
 }
 
+@media (min-width: 480px){
+  .xs\:mb-5{
+    margin-bottom: 1.25rem;
+  }
+
+  .xs\:h-\[200px\]{
+    height: 200px;
+  }
+
+  .xs\:gap-5{
+    gap: 1.25rem;
+  }
+}
+
 @media (min-width: 640px){
   .sm\:h-\[540px\]{
     height: 540px;
@@ -1203,10 +1245,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:h-\[130px\]{
     height: 130px;
-  }
-
-  .md\:basis-full{
-    flex-basis: 100%;
   }
 
   .md\:grid-cols-2{
@@ -1298,19 +1336,5 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .xl\:pl-14{
     padding-left: 3.5rem;
-  }
-}
-
-@media (min-width: 480px){
-  .xs\:mb-5{
-    margin-bottom: 1.25rem;
-  }
-
-  .xs\:h-\[200px\]{
-    height: 200px;
-  }
-
-  .xs\:gap-5{
-    gap: 1.25rem;
   }
 }
